@@ -5,6 +5,9 @@
     <div id="demo">
     <button type="button" onclick="loadXMLDoc()">Change Content</button>
     </div>
+    <div id="text">
+    </div>
+</body>
     <script>
     function loadXMLDoc() {
     var xhttp = new XMLHttpRequest();
@@ -14,9 +17,9 @@
     document.getElementById("demo").innerHTML = this.responseText;
     }
     };
-xhttp.open("GET", "xmlhttp_info.txt", true);
-xhttp.send();
-}
+    xhttp.open("GET", "xmlhttp_info.txt", true);
+    var text = xhttp.send();
+    }
 </script>
-</body>
+
 </html>
